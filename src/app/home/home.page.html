@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Hola{{nombreUsuario}}!</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+    <ion-button (click)="nuevoProveedor()">Nuevo Proveedor</ion-button>
+    <ion-list>
+        <ion-list-header>
+            <ion-label>Proveedores</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let provedor of Proveedores">
+            <ion-label>{{provedor.RazonSocial}}</ion-label>
+        </ion-item>
+    </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-button color="danger" (click)="logout()">Cerrar Sesion</ion-button>
 </ion-content>

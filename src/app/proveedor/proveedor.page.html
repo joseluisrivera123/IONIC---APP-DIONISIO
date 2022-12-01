@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Nuevo Proveedor</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <form [formGroup]="proveedorForm" (ngSubmit)="register()">
+        <ion-item>
+            <ion-label>Ruc</ion-label>
+            <ion-input formControlName="Ruc" placeholder="Ingrese ruc"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>RazonSocial</ion-label>
+            <ion-input formControlName="RazonSocial" placeholder="Ingrese RazonSocial"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Correo</ion-label>
+            <ion-input formControlName="Correo" placeholder="Ingrese Correo"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Direccion</ion-label>
+            <ion-input formControlName="Direccion" placeholder="Ingrese Direccion"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>celular</ion-label>
+            <ion-input formControlName="celular" placeholder="Ingrese Celular"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" color="success">
+            Guardar
+        </ion-button>
+        <ion-button [routerLink]="['../home']" type="button" color="danger">
+            Cancel
+        </ion-button>
+    </form>
+</ion-content>
